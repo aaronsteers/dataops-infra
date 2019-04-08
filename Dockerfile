@@ -3,7 +3,7 @@ FROM hashicorp/terraform:light as build
 RUN ls -l
 #RUN mkdir /workspace
 COPY modules/aws/free-tier /workspace
-RUN cd /workspace
+WORKDIR /workspace
 RUN ls -l
 
 RUN terraform init
