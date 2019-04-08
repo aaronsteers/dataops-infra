@@ -31,7 +31,7 @@ action "terraform-validate" {
   needs = "terraform-init"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    TF_ACTION_WORKING_DIR = "."
+    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
   }
 }
 
