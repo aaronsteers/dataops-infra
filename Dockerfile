@@ -1,3 +1,3 @@
-FROM ubuntu:16.01 as build
+FROM ubuntu:16.04 as build
 
 RUN echo "Test build"
