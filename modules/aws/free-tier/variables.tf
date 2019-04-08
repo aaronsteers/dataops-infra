@@ -1,5 +1,6 @@
 variable "public_key_path" {
   default = "***"
+
   description = <<DESCRIPTION
 Path to the SSH public key to be used for authentication.
 Ensure this keypair is added to your local SSH agent so provisioners can
