@@ -1,4 +1,4 @@
 FROM hashicorp/terraform:light as build
 
-COPY . .
+COPY modules/aws/free-tier/ .
 RUN terraform plan
