@@ -1,6 +1,9 @@
 FROM hashicorp/terraform:light as build
 
-COPY modules/aws/free-tier/* .
+RUN ls -l
+#RUN mkdir /workspace
+COPY modules/aws/free-tier /workspace
+WORKDIR /workspace
 RUN ls -l
 
 RUN terraform init
