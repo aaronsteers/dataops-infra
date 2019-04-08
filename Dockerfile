@@ -1,3 +1,4 @@
-FROM ubuntu:16.04 as build
+FROM hashicorp/terraform:light as build
 
-RUN echo "Test build"
+COPY . .
+RUN terraform plan
