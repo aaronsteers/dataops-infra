@@ -1,5 +1,5 @@
 variable "public_key_path" {
-  default     = "***"
+  default = "***"
 
   description = <<DESCRIPTION
 Path to the SSH public key to be used for authentication.
