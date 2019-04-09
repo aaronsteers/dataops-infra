@@ -50,7 +50,9 @@ action "terraform-plan" {
     "AWS_SECRET_ACCESS_KEY",
   ]
   env = {
-    TF_ACTION_WORKING_DIR = "."
+    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
+    TF_VAR_AWS_ACCESS_KEY_ID = "$AWS_ACCESS_KEY_ID"
+    TF_VAR_AWS_SECRET_ACCESS_KEY = "$AWS_SECRET_ACCESS_KEY"
     # If you're using Terraform workspaces, set this to the workspace name.
     TF_ACTION_WORKSPACE = "default"
   }
