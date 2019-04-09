@@ -13,7 +13,7 @@ action "terraform-fmt" {
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    TF_ACTION_WORKING_DIR = "."
+    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
   }
 }
 
@@ -22,7 +22,7 @@ action "terraform-init" {
   needs = "terraform-fmt"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    TF_ACTION_WORKING_DIR = "."
+    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
   }
 }
 
