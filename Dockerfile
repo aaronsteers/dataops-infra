@@ -8,5 +8,5 @@ RUN ls -l
 
 RUN terraform init
 RUN terraform plan \
-        -var "key_name=$AWS_SECRET_KEY_ID" \
-        -var "key_value=$AWS_SECRET_KEY"
+        -var "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" \
+        -var "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"
