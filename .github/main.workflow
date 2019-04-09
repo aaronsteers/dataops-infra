@@ -19,7 +19,7 @@ action "terraform-fmt" {
 
 action "terraform-init" {
   uses = "hashicorp/terraform-github-actions/init@v0.2.0"
-  needs = "terraform-fmt"
+  needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   env = {
     TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
