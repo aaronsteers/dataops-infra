@@ -36,6 +36,8 @@ action "terraform-validate" {
   ]
   env = {
     TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
+    TF_VAR_AWS_ACCESS_KEY_ID = "$AWS_ACCESS_KEY_ID"
+    TF_VAR_AWS_SECRET_ACCESS_KEY = "$AWS_SECRET_ACCESS_KEY"
   }
 }
 
