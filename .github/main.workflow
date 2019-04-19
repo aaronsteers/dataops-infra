@@ -13,7 +13,7 @@ action "terraform-fmt" {
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
+    TF_ACTION_WORKING_DIR = "modules/aws"
   }
 }
 
@@ -22,7 +22,7 @@ action "terraform-init" {
   needs = "filter-to-pr-open-synced"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
+    TF_ACTION_WORKING_DIR = "modules/aws"
   }
 }
 
@@ -35,7 +35,7 @@ action "terraform-validate" {
     "AWS_SECRET_ACCESS_KEY",
   ]
   env = {
-    TF_ACTION_WORKING_DIR = "modules/aws/free-tier"
+    TF_ACTION_WORKING_DIR = "modules/aws"
     TF_VAR_AWS_ACCESS_KEY_ID = "$AWS_ACCESS_KEY_ID"
     TF_VAR_AWS_SECRET_ACCESS_KEY = "$AWS_SECRET_ACCESS_KEY"
   }
