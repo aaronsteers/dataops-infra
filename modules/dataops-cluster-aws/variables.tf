@@ -1,5 +1,6 @@
 variable "AWS_ACCESS_KEY_ID" {
   description = "Key ID for AWS key pair"
+  default     = ""
 }
 
 variable "AWS_SECRET_ACCESS_KEY" {
@@ -20,4 +21,8 @@ variable "AWS_AMIS" {
     us-west-1 = "ami-969ab1f6"
     us-west-2 = "ami-8803e0f0"
   }
+}
+
+variable "ec2_instance_type" {
+  default = "t2.large"
 }
